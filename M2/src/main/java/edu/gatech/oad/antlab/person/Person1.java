@@ -35,7 +35,7 @@ public class Person1 {
             StringBuilder str = new StringBuilder();
             
         }
-        return str;
+        return null;
     }
     
     /**
