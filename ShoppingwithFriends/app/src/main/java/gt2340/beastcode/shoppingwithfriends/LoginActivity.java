@@ -3,9 +3,7 @@ package gt2340.beastcode.shoppingwithfriends;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -19,17 +17,7 @@ import android.widget.TextView;
 import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.google.android.gms.auth.GoogleAuthException;
-import com.google.android.gms.auth.GoogleAuthUtil;
-import com.google.android.gms.auth.UserRecoverableAuthException;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.Scopes;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.plus.Plus;
 
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 import android.widget.EditText;
 
@@ -66,7 +54,7 @@ public class LoginActivity extends ActionBarActivity {
 
         mLoggedInStatusTextView = (TextView) findViewById(R.id.login_status);
 
-        mFirebaseRef = new Firebase("https://scorching-heat-4537.firebaseio.com/");
+        mFirebaseRef = new Firebase("https://2340beastcode.firebaseio.com/");
 
         /* Setup the progress dialog that is displayed later when authenticating with Firebase */
         mAuthProgressDialog = new ProgressDialog(this);
@@ -87,16 +75,16 @@ public class LoginActivity extends ActionBarActivity {
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        /* If a user is currently authenticated, display a logout menu */
-//        if (this.mAuthData != null) {
-//            getMenuInflater().inflate(R.menu.menu_main, menu);
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        /* If a user is currently authenticated, display a logout menu */
+        if (this.mAuthData != null) {
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public void cancelLogin(View view) {
         Intent i = new Intent(getBaseContext(), LaunchActivity.class);
