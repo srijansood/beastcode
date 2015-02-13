@@ -52,11 +52,13 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:singleLine="true" />
+        android:singleLine="true" >
+    </EditText>
 
     <Button
         android:id="@+id/login_with_password"
         android:text="@string/login_with_password"
+        android:onClick="loginClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

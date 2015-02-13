@@ -15,5 +15,6 @@
     <string name="mobile">Mobile No</string>
     <string name="title_activity_launch">LaunchActivity</string>
     <string name="title_activity_autheticated">Autheticated</string>
+    <string name="title_activity_failed">Failed</string>
 
 </resources>

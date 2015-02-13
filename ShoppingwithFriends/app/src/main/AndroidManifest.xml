@@ -30,6 +30,10 @@
             android:name=".Autheticated"
             android:label="@string/title_activity_autheticated" >
         </activity>
+        <activity
+            android:name=".Failed"
+            android:label="@string/title_activity_failed" >
+        </activity>
     </application>
 
 </manifest>

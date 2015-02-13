@@ -6,29 +6,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 
 
-public class LoginActivity extends ActionBarActivity {
-
-    private EditText userU, passU;
+public class Failed extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        userU = (EditText) findViewById(R.id.editText1);
-        passU = (EditText) findViewById(R.id.editText2);
-
-
-
+        setContentView(R.layout.activity_failed);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_autheticated, menu);
+        getMenuInflater().inflate(R.menu.menu_failed, menu);
         return true;
     }
 
@@ -47,23 +39,8 @@ public class LoginActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void cancelLogin(View view) {
+    public void cancel(View view) {
         Intent i = new Intent(getBaseContext(), LaunchActivity.class);
-        startActivityForResult(i, 1);
-    }
-
-    public void loginClick(View view) {
-        loginWithPassword((userU.getText()).toString(), (passU.getText()).toString());
-    }
-
-    public void loginWithPassword(String email, String password) {
-
-        Intent i;
-        if (email.equals("test") && password.equals("user")) {
-            i = new Intent(getBaseContext(), Autheticated.class);
-        } else {
-            i = new Intent(getBaseContext(), Failed.class);
-        }
         startActivityForResult(i, 1);
     }
 }
