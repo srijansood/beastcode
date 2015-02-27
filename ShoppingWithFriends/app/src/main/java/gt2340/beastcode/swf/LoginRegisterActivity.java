@@ -6,7 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -15,13 +17,15 @@ import com.parse.SignUpCallback;
 
 public class LoginRegisterActivity extends ActionBarActivity {
 
+    private EditText userEditText, passEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_register);
         Parse.initialize(this, "qf1Y60qpWiX7jR39xGb8jNaMOXe9Va2RsgxnLBK6", "nUOtET9LJpyJVwL2zqbqpQCpWLnvKXNwAX7PrZHU");
-        EditText userEditText = (EditText) findViewById(R.id.username);
-        EditText passEditText = (EditText) findViewById(R.id.password);
+        userEditText = (EditText) findViewById(R.id.username);
+        passEditText = (EditText) findViewById(R.id.password);
     }
 
 
@@ -52,19 +56,49 @@ public class LoginRegisterActivity extends ActionBarActivity {
      * @param view
      * @return
      */
-    private boolean login(View view) {
-
-        return false;
+    private void login(View view) {
+        String username = userEditText.getText().toString().trim();
+        String password = passEditText.getText().toString().trim();
+        ParseUser.logInInBackground(username, password, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if (user != null) {
+                    Toast.makeText(LoginRegisterActivity.this, "Login Success!",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    // Signup failed. Look at the ParseException to see what happened.
+                    Toast.makeText(LoginRegisterActivity.this, e.getMessage(),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     /**
-     *
+     * Sign up a new user
      * @param view
      * @return
      */
-    private boolean register(View view) {
+    private void register(View view) {
+        String username = userEditText.getText().toString().trim();
+        String password = passEditText.getText().toString().trim();
+        boolean done = false;
 
-        return false;
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+
+        user.signUpInBackground(new SignUpCallback() {
+            public void done(ParseException e) {
+                if (e == null) {
+                    Toast.makeText(LoginRegisterActivity.this, "Success!",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginRegisterActivity.this, e.getMessage(),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
     //TODO
