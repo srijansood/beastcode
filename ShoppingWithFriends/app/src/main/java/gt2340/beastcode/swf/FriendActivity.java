@@ -4,14 +4,21 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import com.parse.ParseUser;
 
 
 public class FriendActivity extends ActionBarActivity {
+
+    private EditText friendEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friend);
+        friendEditText = (EditText) findViewById(R.id.friend);
     }
 
 
@@ -35,5 +42,30 @@ public class FriendActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void addNewFriend(View view){
+//        if (f == null || !f.isUser()) {
+//            //exception
+//        }
+        String friendUsername = friendEditText.getText().toString().trim();
+        //User f = Frien.....create User object using username?
+        //check is valid (registered) user
+        //check if user's friend list already contains
+        //add to friendList
+    }
+
+
+    /**
+     * Deletes a friend from a user's friendlist.
+     * @param f friend to be deleted
+     */
+    private void deleteFriend(User f) {
+//        if (f == null || !f.isUser()) {
+//            //exception
+//        }
+        //currUser.friendList.remove(f);
+        //Direct access, unsafe ^ ?
     }
 }

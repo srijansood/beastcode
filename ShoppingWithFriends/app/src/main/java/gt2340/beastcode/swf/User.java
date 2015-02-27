@@ -2,6 +2,7 @@ package gt2340.beastcode.swf;
 
 import com.parse.ParseUser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,11 +13,17 @@ import java.util.List;
  * @version 1.0
  */
 public class User extends ParseUser {
+    //private ParseUser p;
     private int uid;
-    private String username;
-    private String password;
+    private String uname;
     private List<User> friendList;
 
+    public User() {
+       //ParseUser() called through super();
+        uname = this.getUsername();
+        uid = this.hashCode();
+        friendList = new ArrayList<>();
+    }
 
 
 
