@@ -4,6 +4,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 
 public class LoginRegisterActivity extends ActionBarActivity {
@@ -12,6 +19,9 @@ public class LoginRegisterActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_register);
+        Parse.initialize(this, "qf1Y60qpWiX7jR39xGb8jNaMOXe9Va2RsgxnLBK6", "nUOtET9LJpyJVwL2zqbqpQCpWLnvKXNwAX7PrZHU");
+        EditText userEditText = (EditText) findViewById(R.id.username);
+        EditText passEditText = (EditText) findViewById(R.id.password);
     }
 
 
@@ -35,5 +45,30 @@ public class LoginRegisterActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     *
+     * @param view
+     * @return
+     */
+    private boolean login(View view) {
+
+        return false;
+    }
+
+    /**
+     *
+     * @param view
+     * @return
+     */
+    private boolean register(View view) {
+
+        return false;
+    }
+
+    //TODO
+    private boolean loginfb(View view) {
+        return false;
     }
 }
