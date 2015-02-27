@@ -1,42 +1,24 @@
 package gt2340.beastcode.swf;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-
-import com.parse.ParseUser;
 
 
-public class WelcomeActivity extends ActionBarActivity {
+public class FriendActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
-        ParseUser currentUser = ParseUser.getCurrentUser();
-//        if (currentUser != null) { //already logged in
-//            Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
-//            WelcomeActivity.this.startActivity(i);
-//        }
+        setContentView(R.layout.activity_friend);
     }
 
-    /**
-     * Starts the LoginRegisterActivity
-     * @param view Content view
-     */
-    public void callLogin(View view) {
-        Intent i = new Intent(WelcomeActivity.this, LoginRegisterActivity.class);
-        WelcomeActivity.this.startActivity(i);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_welcome, menu);
+        getMenuInflater().inflate(R.menu.menu_friend, menu);
         return true;
     }
 
