@@ -1,35 +1,24 @@
 package gt2340.beastcode.swf;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
 
-public class WelcomeActivity extends ActionBarActivity {
+public class LoginRegisterActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_login_register);
     }
 
-    /**
-     * Starts the LoginRegisterActivity
-     * @param view Content view
-     */
-    private void callLoginScreen(View view) {
-        Intent i = new Intent(WelcomeActivity.this, LoginRegisterActivity.class);
-        WelcomeActivity.this.startActivity(i);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_welcome, menu);
+        getMenuInflater().inflate(R.menu.menu_login_register, menu);
         return true;
     }
 
