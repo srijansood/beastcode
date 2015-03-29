@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/classes-6bc8849a44913afd85a950a7bbae19407806fc2b.jar" />
+    </item>
+    <item
         jar="/Users/Srijan/Development/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -9,11 +16,11 @@
         <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-a1575a9dcb5e2bc46bba8cf59954655a8711c476.jar" />
     </item>
     <item
-        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/classes-6bc8849a44913afd85a950a7bbae19407806fc2b.jar" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9d5f50f40daf098403ef651afe43edd554f4f821.jar" />
     </item>
     <item
         jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
@@ -23,18 +30,18 @@
         <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/classes-ee9fa2ed50fdab35d02cf22f9e413ecca1def85e.jar" />
     </item>
     <item
-        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/libs/Parse-1.8.2.jar"
+        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/Parse-1.9.0/Parse-1.9.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="c2cb0bfe37cbefd855b6faa3c9a5be833aba7300">
-        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/Parse-1.8.2-4b55c47d1075dac027bbc60c16b530b22016552b.jar" />
+        sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
+        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-e9b756c47128c1c599d905e8245825fe0da701d9.jar" />
     </item>
     <item
-        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/libs/bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-9d5f50f40daf098403ef651afe43edd554f4f821.jar" />
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/Srijan/Dropbox/Studies/CS2340/beastcode/ShoppingWithFriends/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-770be36f2dee93321c3e84b979e5bbb5e6375c50.jar" />
     </item>
 
 </items>

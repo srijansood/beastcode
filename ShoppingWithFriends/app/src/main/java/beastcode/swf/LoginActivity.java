@@ -1,4 +1,4 @@
-package gt2340.beastcode.swf;
+package beastcode.swf;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,14 +15,14 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 
-public class LoginRegisterActivity extends ActionBarActivity {
+public class LoginActivity extends ActionBarActivity {
 
     private EditText userEditText, passEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_register);
+        setContentView(R.layout.activity_login);
         Parse.initialize(this, "qf1Y60qpWiX7jR39xGb8jNaMOXe9Va2RsgxnLBK6", "nUOtET9LJpyJVwL2zqbqpQCpWLnvKXNwAX7PrZHU");
         userEditText = (EditText) findViewById(R.id.username);
         passEditText = (EditText) findViewById(R.id.password);
@@ -32,7 +32,7 @@ public class LoginRegisterActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login_register, menu);
+        getMenuInflater().inflate(R.menu.menu_login, menu);
         return true;
     }
 
@@ -63,11 +63,11 @@ public class LoginRegisterActivity extends ActionBarActivity {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if (user != null) {
-                    Toast.makeText(LoginRegisterActivity.this, "Login Success!",
+                    Toast.makeText(LoginActivity.this, "Login Success!",
                             Toast.LENGTH_LONG).show();
                 } else {
                     // Signup failed. Look at the ParseException to see what happened.
-                    Toast.makeText(LoginRegisterActivity.this, e.getMessage(),
+                    Toast.makeText(LoginActivity.this, e.getMessage(),
                             Toast.LENGTH_LONG).show();
                 }
             }
@@ -91,10 +91,10 @@ public class LoginRegisterActivity extends ActionBarActivity {
         user.signUpInBackground(new SignUpCallback() {
             public void done(ParseException e) {
                 if (e == null) {
-                    Toast.makeText(LoginRegisterActivity.this, "Success!",
+                    Toast.makeText(LoginActivity.this, "Success!",
                             Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(LoginRegisterActivity.this, e.getMessage(),
+                    Toast.makeText(LoginActivity.this, e.getMessage(),
                             Toast.LENGTH_LONG).show();
                 }
             }

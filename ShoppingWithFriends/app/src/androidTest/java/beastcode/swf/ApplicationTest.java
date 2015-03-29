@@ -1,4 +1,4 @@
-package gt2340.beastcode.swf;
+package beastcode.swf;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
